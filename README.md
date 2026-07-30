@@ -53,7 +53,7 @@ only ever renders buttons for transitions the API has already said are legal.
 | Auth | JWT (`jsonwebtoken`) + `bcryptjs` password hashing |
 | Live updates | Polling every 10 seconds — no WebSockets |
 
-These are fixed, deliberate choices (see `CLAUDE.md`), not a partial migration in
+These are fixed, deliberate choices , not a partial migration in
 progress: no TypeScript, no Redux, no Docker, no chart library.
 
 ## Architecture
@@ -214,7 +214,7 @@ Captured at the widths and screens listed in
 Honest list — none of this exists yet:
 
 - **Real-time updates instead of polling.** 10-second polling was chosen deliberately for
-  cost and simplicity (see `CLAUDE.md`), but WebSockets or SSE would remove the delay
+  cost and simplicity , but WebSockets or SSE would remove the delay
   entirely.
 - **Automated frontend tests.** The backend has 40+ assertion-based checks; the client
   has none yet.
@@ -225,7 +225,6 @@ Honest list — none of this exists yet:
 
 ## Project docs
 
-- [`CLAUDE.md`](CLAUDE.md) — project rules, scope and conventions
 - [`docs/API-CONTRACT.md`](docs/API-CONTRACT.md) — full API reference
 - [`docs/UI-SPEC.md`](docs/UI-SPEC.md) — design tokens and page-by-page frontend spec
 - [`docs/BUILD-PLAN.md`](docs/BUILD-PLAN.md) — the phased plan this project was built from
