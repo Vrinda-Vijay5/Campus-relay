@@ -222,10 +222,3 @@ Honest list — none of this exists yet:
   student having the tracking page open.
 - **A calculated ETA** on each pool item and each order-in-progress, instead of just the
   arrival time the student entered when they created the request.
-
-## Project docs
-
-- [`docs/API-CONTRACT.md`](docs/API-CONTRACT.md) — full API reference
-- [`docs/UI-SPEC.md`](docs/UI-SPEC.md) — design tokens and page-by-page frontend spec
-- [`docs/BUILD-PLAN.md`](docs/BUILD-PLAN.md) — the phased plan this project was built from
-- [`docs/SETUP-WINDOWS.md`](docs/SETUP-WINDOWS.md) — full local setup walkthrough
