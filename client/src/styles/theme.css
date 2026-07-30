@@ -1,0 +1,187 @@
+/* Design tokens — see docs/UI-SPEC.md section 1. Every raw hex value in this
+   app lives here and nowhere else; components reference these custom
+   properties only. */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  /* Colour */
+  --bg: #0f1a2a;
+  --surface: #152238;
+  --surface-2: #1b2b44;
+  --border: #2a3b55;
+  --border-strong: #3c4f6c;
+  --text: #e6ecf5;
+  --text-dim: #93a3bd;
+  --accent: #4d8eff;
+  --accent-soft: #7aaaff;
+  --violet: #b492ff;
+  --warn: #ffd86b;
+  --ok: #a8f0b7;
+  --danger: #ff7b7b;
+
+  /* Shape */
+  --radius-card: 18px;
+  --radius-control: 10px;
+  --shadow-card: 0 12px 26px rgba(0, 0, 0, 0.45);
+  --maxw: 1100px;
+
+  /* Spacing scale — use only these values */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+
+  /* Typography scale */
+  --font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --text-display: 34px;
+  --text-title: 26px;
+  --text-heading: 20px;
+  --text-body: 16px;
+  --text-small: 14px;
+  --text-caption: 12px;
+}
+
+/* Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-family);
+  font-size: var(--text-body);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure {
+  margin: 0;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: var(--accent-soft);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* Heading scale */
+h1 {
+  font-size: var(--text-title);
+  font-weight: 700;
+}
+
+h2 {
+  font-size: var(--text-heading);
+  font-weight: 600;
+}
+
+h3 {
+  font-size: var(--text-body);
+  font-weight: 600;
+}
+
+small,
+.text-caption {
+  font-size: var(--text-caption);
+  color: var(--text-dim);
+}
+
+.text-dim {
+  color: var(--text-dim);
+}
+
+.text-display {
+  font-size: var(--text-display);
+  font-weight: 700;
+}
+
+/* Gradient wordmark — reserved for the "Campus Relay" brand name only */
+.wordmark {
+  background: linear-gradient(90deg, var(--accent-soft), var(--violet));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+}
+
+/* Visible focus ring on every interactive element */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--accent-soft);
+  outline-offset: 2px;
+}
+
+/* Entry animation, disabled for users who asked for reduced motion */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-up {
+  animation: fadeUp 0.4s ease-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fade-up {
+    animation: none;
+  }
+
+  * {
+    scroll-behavior: auto !important;
+  }
+}
