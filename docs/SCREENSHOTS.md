@@ -1,5 +1,7 @@
 # Screenshots
 
+Repo: <https://github.com/Vrinda-Vijay5/Campus-relay>
+
 Exactly the screens the `README.md` image slots expect, in order, with the width to
 capture at and what state to put the app in first. Save each file under
 `docs/screenshots/` with the exact filename below — the README already links to these
